@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply bg-gray-900;
+}
+
+p, span, h1, h2, h3, h5 {
+    @apply text-gray-200;
+}
+
+p + p {
+    @apply mt-4;
+}
+
+input.register, textarea {
+    @apply focus:outline-none bg-gray-700 p-2 w-full border border-gray-700 rounded-md text-gray-200 mt-6 shadow-sm;
+}
+
+input.register:focus ~ label, textarea:focus ~ label {
+    @apply text-blue-400;
+}
+
+input.register:focus, textarea:focus {
+    @apply bg-gray-600 border border-blue-400;
+}
+
+label.register {
+    @apply text-gray-500 block mb-2 uppercase font-semibold text-xs absolute top-0 duration-200;
+}
+
+.button {
+    @apply ml-3 rounded-md text-xs font-semibold uppercase py-3 px-5 border duration-100 mt-0.5;
+}
+
+.button.button--primary {
+    @apply bg-blue-400 hover:bg-blue-500 text-white border-blue-400 hover:border-blue-500;
+}
+
+.button.button--secondary {
+    @apply border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white;
+}
